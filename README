@@ -1,0 +1,54 @@
+Color v1.1
+----------
+
+ABOUT
+-----
+Color is a convenience tool to ease the use of ANSI coloring in your shell
+scripts by hiding the escape sequences through command substitution.
+
+
+COMPILING
+---------
+Just type 'make' to compile Color, and 'make install' to install it as
+/usr/local/bin/color.
+
+
+INVOKING
+--------
+Invoke color with no parameters to see usage information and an example.
+Be sure your terminal supports ANSI escape sequences! :-)
+
+
+USING
+-----
+To use ANSI color in your shell scripts, place a color command, wrapped in $()
+or `` depending on your shell, before the text you want colorized, and then a
+$(color off) after the text.
+
+
+EXAMPLE
+-------
+#!/bin/bash
+echo -n "We have $(color bd)bold$(color off), $(color red)red$(color off), " 
+echo "and $(color ltcyan magenta)light cyan on magenta$(color off)."
+
+Note: on some terminals, bold and underline may appear simply as different
+colors instead of actually being bold or underlined. This is a function of
+your terminal program, not Color.
+
+
+SUGGESTIONS
+-----------
+I welcome any suggestions, bug reports, etc. that you may have about Color.
+Please direct them to me at moshe@runslinux.net. 
+
+
+OBTAINING
+---------
+The latest version of Color is always available at:
+http://runslinux.net/projects/color
+
+
+Anyway, that's about all I have to say. Enjoy the program!
+
+- Moshe
